@@ -5,7 +5,7 @@
 一个始终置顶的悬浮按钮，点击弹出动作菜单，一键执行热键、启动应用、发送文本、运行脚本……还能根据当前窗口自动切换动作集。
 
 ![GitHub release)](https://img.shields.io/github/v/release/Jimmyxiao2009/Assistouch)
-![GitHub](https://img.shields.io/github/license/Jimmyxiao2009/Assistouch)
+![GitHub LGPL-3.0](https://img.shields.io/badge/license-GPL%203.0-blue)
 
 ---
 
