@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Assistouch1 (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
+    }
+  }
+}

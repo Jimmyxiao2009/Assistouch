@@ -1,0 +1,98 @@
+<Page
+    x:Class="AssistiveTouch.Pages.RulesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ── Left panel header ── -->
+        <Grid Grid.Row="0" Grid.Column="0"
+              Margin="24,28,0,12">
+            <TextBlock Text="应用规则"
+                       Style="{StaticResource TitleLargeTextBlockStyle}"
+                       FontWeight="SemiBold"
+                       VerticalAlignment="Center"/>
+            <Button x:Name="AddRuleBtn"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Width="32" Height="32"
+                    Padding="0"
+                    CornerRadius="16"
+                    Style="{StaticResource AccentButtonStyle}"
+                    Click="AddRuleBtn_Click">
+                <FontIcon Glyph="&#xE710;" FontFamily="Segoe MDL2 Assets" FontSize="14"/>
+            </Button>
+        </Grid>
+
+        <!-- ── Right panel header placeholder ── -->
+        <Border Grid.Row="0" Grid.Column="2"
+                Margin="0,28,24,12"
+                VerticalAlignment="Center">
+            <TextBlock x:Name="DetailHeaderText"
+                       Text="规则详情"
+                       Style="{StaticResource TitleLargeTextBlockStyle}"
+                       FontWeight="SemiBold"
+                       Opacity="0"/>
+        </Border>
+
+        <!-- ── Rule list ── -->
+        <ListView x:Name="RuleList"
+                  Grid.Row="1" Grid.Column="0"
+                  Margin="24,0,0,24"
+                  SelectionMode="Single"
+                  SelectionChanged="RuleList_SelectionChanged">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="0,3,0,0"/>
+                    <Setter Property="CornerRadius" Value="8"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="12,10"
+                            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                            BorderThickness="1"
+                            CornerRadius="8">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Column="0" Width="8" Height="8"
+                                     VerticalAlignment="Center">
+                                <Ellipse.Fill>
+                                    <SolidColorBrush Color="{ThemeResource SystemAccentColor}"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <TextBlock Grid.Column="2"
+                                       Text="{Binding Name}"
+                                       Style="{StaticResource BodyTextBlockStyle}"
+                                       VerticalAlignment="Center"
+                                       TextTrimming="CharacterEllipsis"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- ── Detail pane ── -->
+        <ScrollViewer Grid.Row="1" Grid.Column="2"
+                      Margin="0,0,24,24"
+                      VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="DetailPanel" Spacing="16"/>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,28 @@
+<Window
+    x:Class="AssistiveTouch.ActionMenuWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--
+        Windows context-menu style popup.
+        - Acrylic semi-transparent background
+        - 4 px corner radius (matches Windows 11 context menus)
+        - 1 px border with subtle stroke
+        - Compact 32 px rows, no Expander groups
+    -->
+    <Grid Background="Transparent">
+        <Border x:Name="MenuCard"
+                HorizontalAlignment="Stretch"
+                CornerRadius="8"
+                Padding="3"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource SurfaceStrokeColorDefaultBrush}"
+                Background="Transparent"
+                MinWidth="280"
+                MaxWidth="360">
+            <Border.Shadow><ThemeShadow/></Border.Shadow>
+
+            <StackPanel x:Name="RootPanel" Spacing="0"/>
+        </Border>
+    </Grid>
+</Window>

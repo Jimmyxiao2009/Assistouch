@@ -1,0 +1,27 @@
+# Build outputs
+bin/
+obj/
+output/
+Release_Output/
+Release_Submit/
+
+# Sideload signing certificate (private key — do not commit)
+*.pfx
+
+# Visual Studio
+.vs/
+*.user
+
+# Build output packages (committed as GitHub Release artifacts instead)
+AppPackages/
+Assistouch1 (Package)/bin/
+Assistouch1 (Package)/obj/
+
+# Cache / generated
+*.assets.cache
+
+# Personal settings
+settings.local.json
+
+# Archives
+*.zip
