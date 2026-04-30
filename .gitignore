@@ -26,3 +26,6 @@ settings.local.json
 # Archives
 *.zip
 
+
+# AI guidance (internal)
+CLAUDE.md
