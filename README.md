@@ -1,3 +1,6 @@
+> **本项目已暂停维护并归档。** 代码与 Release 保留作参考，不再接受更新。
+> 注：README 中提到的 build-release-sideload.ps1 / build-store.ps1 构建脚本未包含在本仓库中，请直接用 Visual Studio 打开 Assistouch1.slnx 构建。
+
 # Assistouch
 
 **Windows 桌面悬浮触控辅助工具** — 就像 iPhone 的 AssistiveTouch，但给你的 Windows 用。
